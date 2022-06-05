@@ -26,8 +26,9 @@ const players = {
 }
 
 app.get('/', (req, res) =>{
-    res.sendFile(__dirname + '/index.html')
+    res.send('Hello World')
 })
+
 
 app.get('/api/:name', (req, res) => {
     let reqName = req.params.name
