@@ -1,9 +1,8 @@
-const express = require('express')
-const app = express()
-const PORT = 8000
+import express from 'express'
+import mongoose from 'mongoose'
 
-const mongoose = require('mongoose')
-const url = 'mongodb+srv://tpacun:z!Baqr8MD9DFcV7@fm2020.jgiwe23.mongodb.net/?retryWrites=true&w=majority'
+const app = express()
+const PORT = process.env.PORT || 8000
 
 const players = {
     "Lionel Andrés Messi":{
