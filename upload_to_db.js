@@ -43,7 +43,7 @@ for (let i = 1; i < arr.length; i++) {
 
 console.log(jsonObj.length)
 
-// Set up connection to db and insertcontent to db
+// Set up connection to db and insert documents in db
 const client = new MongoClient(process.env.MONGODB_URL)
 
 async function insertEntries(data) {
