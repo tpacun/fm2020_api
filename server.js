@@ -52,7 +52,7 @@ async function main() {
     await client.connect();
     console.log('Connected successfully to server');
     const db = client.db('fm2020');
-    const collection = db.collection('documents');
+    const collection = db.collection('fm2020collectionclean');
 
     // Server starts listening on given port
     app.listen(PORT, () => {

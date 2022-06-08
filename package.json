@@ -14,5 +14,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "csv-string": "^4.1.0"
+  }
 }
