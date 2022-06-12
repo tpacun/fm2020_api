@@ -41,9 +41,20 @@ app.get('/', (req, res) =>{
     res.send('Hello World')
 })
 
-
-app.get('/api/id/:idNumber', (req, res) => {
+app.get('/api/players/id/:idNumber', (req, res) => {
     let reqName = req.params.idNumber
     collection.find({"_id": {$eq: reqName}}).toArray()
+        .then(data => {res.send(data)})
+})
+
+app.get('/api/players/team/:team', (req, res) => {
+    let reqName = req.params.team
+    collection.find({"Club" : {$eq: reqName}}).toArray()
+    .then(data => {res.send(data)})
+})
+
+app.get('/api/players/division/:division', (req, res) => {
+    let reqName = req.params.division
+    collection.find({"Division" : {$eq: reqName}}).toArray()
     .then(data => {res.send(data)})
 })
